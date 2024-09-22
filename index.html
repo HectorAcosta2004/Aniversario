@@ -15,8 +15,36 @@
         <div id="message" class="hidden">
             <p>Te amo más de lo que las palabras pueden expresar. ¡Por muchos meses más juntos!</p>
         </div>
+
+        <div class="carousel">
+            <img src="/assets/1.jpg" alt="Imagen 1" class="carousel-image active">
+            <img src="/assets/2.jpg" alt="Imagen 2" class="carousel-image">
+            <img src="/assets/3.jpg" alt="Imagen 3" class="carousel-image">
+            <img src="/assets/4.jpg" alt="Imagen 4" class="carousel-image">
+            <img src="/assets/5.jpg" alt="Imagen 5" class="carousel-image">
+            <img src="/assets/6.jpg" alt="Imagen 6" class="carousel-image">
+            <img src="/assets/7.jpg" alt="Imagen 7" class="carousel-image">
+            <img src="/assets/8.jpg" alt="Imagen 8" class="carousel-image">
+        </div>
+
         <div class="hearts"></div>
     </div>
+
+    <audio id="backgroundMusic" src="assets/Coldplay - Sparks [Letra En Español].mp3" autoplay loop muted></audio>
+
     <script src="script.js"></script>
+    <script>
+        const images = document.querySelectorAll('.carousel-image');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length; // Vuelve al inicio
+            images[currentIndex].classList.add('active');
+        }
+
+        // Cambia la imagen cada 1 segundo
+        setInterval(showNextImage, 1000);
+    </script>
 </body>
 </html>

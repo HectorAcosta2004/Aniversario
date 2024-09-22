@@ -50,6 +50,7 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     color: #ff3385;
+    
 }
 
 .hearts {
@@ -90,6 +91,31 @@ button:hover {
     left: 10px;
     top: 0;
 }
+.carousel {
+    position: relative;
+    width: 200px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: 450px; /* Define la altura para que las imágenes se muestren correctamente */
+}
+
+
+.carousel-image {
+    top: 50%;
+    left: 165%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 225px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin: auto;
+    background-image: black;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
 
 @keyframes float {
     0% {
